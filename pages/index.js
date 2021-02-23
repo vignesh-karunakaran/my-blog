@@ -41,8 +41,8 @@ export default function Home({ slugs }) {
 export const getStaticProps = async () => {
   const files = fs.readdirSync("posts").map(filename => filename.replace(".md", ""));
   let data = [];
-  let dataObj = {};
   files.forEach((postPath) => {
+    let dataObj = {};
     let  markdownWithMetadata = fs.readFileSync(path.join("posts", postPath + ".md")).toString();
     let parsedMarkdown =  matter(markdownWithMetadata).data;
     dataObj.title = parsedMarkdown.title;
