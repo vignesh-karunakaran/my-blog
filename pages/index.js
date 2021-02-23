@@ -8,12 +8,13 @@ import matter from "gray-matter"
 
 export default function Home({ slugs }) {
   return (
-    <Layout>
-    <div className={styles.container}>
-      <Head>
+    <>
+    <Head>
         <title>Vignesh Karunakaran</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+    </Head>
+    <Layout>
+    <div className={styles.container}>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -36,6 +37,7 @@ export default function Home({ slugs }) {
       </main>
     </div>
     </Layout>
+    </>
   )
 }
 export const getStaticProps = async () => {
@@ -44,9 +46,9 @@ export const getStaticProps = async () => {
   files.forEach((postPath) => {
     let dataObj = {};
     let  markdownWithMetadata = fs.readFileSync(path.join("posts", postPath + ".md")).toString();
-    let parsedMarkdown =  matter(markdownWithMetadata).data;
-    dataObj.title = parsedMarkdown.title;
-    dataObj.desc = parsedMarkdown.description;
+    let parsedMarkdownMeta =  matter(markdownWithMetadata).data;
+    dataObj.title = parsedMarkdownMeta.title;
+    dataObj.desc = parsedMarkdownMeta.description;
     dataObj.href = postPath;
     data.push(dataObj);
   });
