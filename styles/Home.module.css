@@ -8,6 +8,11 @@
   align-items: center;
 }
 
+.date {
+  font-size: 1rem;
+  color: #7b7b80;
+}
+
 .main {
   padding: 5rem 0;
   flex: 1;
@@ -42,6 +47,8 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+  color: transparent;
 }
 
 .title,
