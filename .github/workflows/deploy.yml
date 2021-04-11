@@ -27,9 +27,9 @@ jobs:
      - run: npm ci
      - run: npm run build
      - run: npm run export
-     - run: touch .nojekyell
+     - run: touch ./out/.nojekyell
      - name: Deploy 🚀
        uses: JamesIves/github-pages-deploy-action@4.1.1
        with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: . # The folder the action should deploy.
+          folder: ./out # The folder the action should deploy.
