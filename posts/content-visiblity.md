@@ -17,3 +17,5 @@ It is available from chrome 85 and in edge 85.
 ![](../images/content-visiblity-browser-support.png)
 
 
+And even we can use `content-visibility: hidden` which is similar to `display: none` which will remove the element from render tree.
+
