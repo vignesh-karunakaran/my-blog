@@ -12,7 +12,7 @@ export default function Home({ slugs }) {
     <>
       <Head>
         <title>Vignesh Karunakaran</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/my-blog/favicon.ico" />
       </Head>
       <Layout>
         <div className={styles.container}>
