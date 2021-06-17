@@ -14,14 +14,18 @@
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 2.5rem 0;
   flex: 1;
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.main > div {
+  display: inline-flex;
+}
 .footer img {
   margin-left: 0.5rem;
 }
