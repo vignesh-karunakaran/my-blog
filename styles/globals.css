@@ -63,6 +63,7 @@ a {
 
 .top-band div a {
     padding: 0 25px;
+    cursor: pointer;
 }
 
 .not-found h1 {
