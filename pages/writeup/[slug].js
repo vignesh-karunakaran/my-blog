@@ -14,6 +14,7 @@ const Post = ({ htmlString, data }) => (
       <title>{data.title}</title>
       <meta title="description" content={data.description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      { data.redirect && <meta httpEquiv="refresh" content={`0;url=${data.redirectionUrl}`} /> }
     </Head>
     <Layout>
       <div className="blog container">
