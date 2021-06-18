@@ -93,7 +93,10 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   max-width: 300px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: .5s ease;
 }
 
 .card:hover,
