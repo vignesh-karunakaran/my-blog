@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&display=swap');
 html {
     font-size: 17px;
 }
@@ -7,7 +7,7 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Sriracha', cursive;
+    font-family: 'Archivo Narrow', sans-serif;
 }
 
 a {
@@ -22,8 +22,9 @@ a {
 .blog.container {
     min-height: 100vh;
     padding: 0 0.5rem;
-    margin: auto 30rem;
+    margin: auto 25rem;
     border: #eee solid 1px;
+    max-width: 1360px;
 }
 
 .blog h1 {

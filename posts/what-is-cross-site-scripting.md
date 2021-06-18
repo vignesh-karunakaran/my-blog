@@ -17,11 +17,11 @@ it enables attackers to inject their codes and steal user cookies by those vunle
 
 ### Types of XSS:
 
-### Persistent XSS (Stored XSS)
+### Persistent XSS (Stored XSS):-
 
 When our injected malicous script is stored in server DB, which can be retrived and executed in client app they are called as Stored XSS.
 
-### Non-persistent XSS (Relfected XSS)
+### Non-persistent XSS (Relfected XSS):-
 
 When malicous payload is injected and an immediate response in an unsafe way is called Relfected XSS.
 
