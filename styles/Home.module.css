@@ -54,7 +54,6 @@
   background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
   color: transparent;
 }
-
 .title,
 .description {
   text-align: center;
@@ -102,6 +101,14 @@
 .card:active {
   color: #0070f3;
   border-color: #0070f3;
+  box-shadow: inset 0px -1px 20px 7px;
+}
+
+.card:hover:nth-child(even),
+.card:focus:nth-child(even),
+.card:active:nth-child(even) {
+  color: #6a0aff;
+  border-color: #6a0aff;
 }
 
 .card h3 {
