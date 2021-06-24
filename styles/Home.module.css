@@ -109,7 +109,6 @@
   color: #0070f3;
   border-color: #0070f3;
   box-shadow: inset 0px -1px 20px 7px;
-  transform: rotateY(45deg);
 }
 
 .card:hover:nth-child(even),
