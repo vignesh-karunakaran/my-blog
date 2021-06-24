@@ -20,7 +20,7 @@ export default function Home({ slugs }) {
           <main className={styles.main}>
             <h1 className={styles.title}>Welcome to Space</h1>
 
-            <div>
+            <div className={styles.aligncenter}>
               {slugs.map((slug) => (
                 <div className={styles.card}>
                   <Link href={`/writeup/${encodeURIComponent(slug.href)}`}>
