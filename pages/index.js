@@ -9,13 +9,26 @@ import styles from '../styles/Home.module.css';
 
 export default function Home({ slugs }) {
   useEffect(() => {
-    const { navigator } = window;
-    const ua = navigator.userAgent.split(';')[0];
-    const os = navigator.platform;
-    setTimeout(() => {
-      const botURl = `https://api.telegram.org/bot1859996962:AAFFVrq4_cGOpKPM-WR8S-uP5WdEo2BVAf4/sendMessage?chat_id=-471129647&text=Vicky, someone visited your blog now from (${os} : ${ua}))!`;
-      fetch(botURl);
-    }, 5000);
+    const { navigator, localStorage } = window;
+    const date = new Date().getDate();
+    if (localStorage.getItem('count')) {
+      if (window.parseInt(localStorage.getItem('count')) <= 5 && localStorage.getItem('date') !== date) {
+        let incrementCount = window.parseInt(localStorage.getItem('count'));
+        localStorage.removeItem('count');
+        localStorage.removeItem('date');
+        localStorage.setItem('count', incrementCount += 1);
+        localStorage.setItem('date', date);
+        const ua = navigator.userAgent.split(';')[0];
+        const os = navigator.platform;
+        setTimeout(() => {
+          const botURl = `https://api.telegram.org/bot1859996962:AAFFVrq4_cGOpKPM-WR8S-uP5WdEo2BVAf4/sendMessage?chat_id=-471129647&text=Vicky, someone visited your blog now from (${os} : ${ua}))!`;
+          fetch(botURl);
+        }, 5000);
+      }
+    } else {
+      localStorage.setItem('count', 1);
+      localStorage.setItem('date', date);
+    }
   });
   return (
     <>
