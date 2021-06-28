@@ -10,7 +10,7 @@ import styles from '../styles/Home.module.css';
 export default function Home({ slugs }) {
   useEffect(() => {
     setTimeout(() => {
-      const botURl = `https://api.telegram.org/bot1859996962:AAFFVrq4_cGOpKPM-WR8S-uP5WdEo2BVAf4/sendMessage?chat_id=-471129647&text=Vicky, some one visted your blog now!`
+      const botURl = `https://api.telegram.org/bot1859996962:AAFFVrq4_cGOpKPM-WR8S-uP5WdEo2BVAf4/sendMessage?chat_id=-471129647&text=Vicky, someone visited your blog now!`
       fetch(botURl);
     }, 5000);
   });
