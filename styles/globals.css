@@ -129,7 +129,7 @@ a {
     flex-direction: column;
     width: 70%;
 }
-.profile-desc {
+.profile-desc h2 {
     margin-bottom: 0;
 }
 @media screen and (max-width: 1300px) {
