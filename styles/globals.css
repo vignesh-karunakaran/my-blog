@@ -101,8 +101,52 @@ a {
     font-size: 17px;
 }
 
+.intro-card {
+    width: 50%;
+    display: flex;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    margin: 0 auto;
+    margin-bottom: 100vh;
+    height: 300px;
+    border-radius: 20px;
+}
+.profile-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    padding-left: 5%;
+}
+.profile-pic img {
+    border-radius: 50%;
+}
+
+.profile-desc {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.profile-desc {
+    margin-bottom: 0;
+}
 @media screen and (max-width: 1300px) {
     .blog.container {
         margin: 0;
+    }
+    .intro-card {
+       text-align: center;
+    }
+    .profile-pic {
+        width: 50%;
+    }
+    .intro-card {
+        height: auto;
+        align-items: center;
+        flex-direction: column;
+        padding: 5% 4%;
+        width: 70%;
     }
 }
