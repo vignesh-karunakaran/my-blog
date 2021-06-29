@@ -14,6 +14,7 @@ export default function Home({ slugs }) {
     if (localStorage.getItem('count')) {
       if (window.parseInt(localStorage.getItem('count')) <= 5 && localStorage.getItem('date') !== date) {
         let incrementCount = window.parseInt(localStorage.getItem('count'));
+        incrementCount = incrementCount === 6 ? 0 : incrementCount;
         localStorage.removeItem('count');
         localStorage.removeItem('date');
         localStorage.setItem('count', incrementCount += 1);
