@@ -2,7 +2,11 @@
 html {
     font-size: 17px;
 }
-
+@media screen and (max-width: 650px) {
+    body {
+     background: url('/random-repeat.svg');
+    }
+}
 html,
 body {
     padding: 0;
@@ -148,11 +152,5 @@ a {
         flex-direction: column;
         padding: 5% 4%;
         width: 70%;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    body {
-     background: url('/random-repeat.svg');
     }
 }
