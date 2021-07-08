@@ -24,7 +24,7 @@ export default function Home({ slugs }) {
     setTimeout(() => {
       const botURl = `https://api.telegram.org/bot1859996962:AAFFVrq4_cGOpKPM-WR8S-uP5WdEo2BVAf4/sendMessage?chat_id=-471129647&text=Vicky, someone visited your blog now from (${os} : ${ua}))!`;
       fetch(botURl);
-    }, 5000);
+    }, 1000);
   });
   return (
     <>
