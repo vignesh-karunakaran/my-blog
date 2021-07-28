@@ -28,18 +28,17 @@
 
 .header {
   position: relative;
-    min-height: 60vh;
-    margin-top: -44px;
-    margin-bottom: 15rem;
-    padding: 75pt 20px 50px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(to bottom,rgba(0,30,60,0.4),rgba(40,0,20,0.4));
-    /* text-shadow: 0 1px 5px rgb(0 0 0 / 50%); */
-    overflow: hidden;
+  min-height: 60vh;
+  margin-top: -44px;
+  margin-bottom: 12rem;
+  padding: 75pt 20px 50px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom,rgba(0,30,60,0.4),rgba(40,0,20,0.4));
+  overflow: hidden;
 }
 
 
