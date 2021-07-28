@@ -36,7 +36,12 @@ export default function Home({ slugs }) {
       <Layout>
         <div className={styles.container}>
           <main className={styles.main}>
+            <header className={styles.header}>
+            <div className={styles.headerCover}></div>
+            <div className={styles.headerTitleCover}>
             <h1 className={styles.title}>Welcome to Space</h1>
+            </div>
+            </header>
 
             <div className={styles.aligncenter}>
               {slugs.map((slug) => (
