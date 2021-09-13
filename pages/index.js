@@ -7,21 +7,20 @@ import matter from 'gray-matter';
 import Layout from '../components/layout';
 import styles from '../styles/Home.module.css';
 
-export default function Home({ slugs, isLive }) {
+export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
   useEffect(() => {
-    console.log(process.env.IS_LIVE);
     if(isLive) {
     window.dataLayer = window.dataLayer || [];
     function gtag(){
       dataLayer.push(arguments)
     }
     gtag('js', new Date());
-    gtag('config', 'G-VC6QSDP6M6', { page_path: window.location.pathname });
+    gtag('config', gToken, { page_path: window.location.pathname });
     const { navigator } = window;
     const ua = navigator.userAgent.split(';')[0];
     const os = navigator.platform;
     setTimeout(() => {
-      const botURl = `https://api.telegram.org/bot1859996962:AAFFVrq4_cGOpKPM-WR8S-uP5WdEo2BVAf4/sendMessage?chat_id=-471129647&text=Vicky, someone visited your blog now from (${os} : ${ua}))!`;
+      const botURl = `https://api.telegram.org/bot1859996962:${TelegramBotToken}/sendMessage?chat_id=-471129647&text=Vicky, someone visited your blog now from (${os} : ${ua}))!`;
       fetch(botURl);
     }, 1000);
   }
@@ -70,6 +69,8 @@ export const getStaticProps = async () => {
   const files = fs.readdirSync('posts').map((filename) => filename.replace('.md', ''));
   const data = [];
   const isLive = process.env.IS_LIVE || false;
+  const gToken = process.env.ANALYTICS_TOKEN;
+  const TelegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
   files.forEach((postPath) => {
     const dataObj = {};
     const markdownWithMetadata = fs.readFileSync(path.join('posts', `${postPath}.md`)).toString();
@@ -83,7 +84,9 @@ export const getStaticProps = async () => {
   return {
     props: {
       slugs: data,
-      isLive
+      isLive,
+      gToken,
+      TelegramBotToken
     },
   };
 };
