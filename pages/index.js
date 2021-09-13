@@ -9,6 +9,7 @@ import styles from '../styles/Home.module.css';
 
 export default function Home({ slugs }) {
   useEffect(() => {
+    if(process.env.VERCEL_ENV === 'production') {
     window.dataLayer = window.dataLayer || [];
     function gtag(){
       dataLayer.push(arguments)
@@ -16,21 +17,13 @@ export default function Home({ slugs }) {
     gtag('js', new Date());
     gtag('config', 'G-VC6QSDP6M6', { page_path: window.location.pathname });
     const { navigator } = window;
-    // const date = new Date().getDate();
-    // if (localStorage.getItem('count')) {
-    // eslint-disable-next-line max-len
-    // if (window.parseInt(localStorage.getItem('count')) <= 5 && localStorage.getItem('date') !== date) {
-    //     let incrementCount = window.parseInt(localStorage.getItem('count'));
-    //     localStorage.removeItem('count');
-    //     localStorage.removeItem('date');
-    //     localStorage.setItem('count', incrementCount += 1);
-    //     localStorage.setItem('date', date);
     const ua = navigator.userAgent.split(';')[0];
     const os = navigator.platform;
     setTimeout(() => {
       const botURl = `https://api.telegram.org/bot1859996962:AAFFVrq4_cGOpKPM-WR8S-uP5WdEo2BVAf4/sendMessage?chat_id=-471129647&text=Vicky, someone visited your blog now from (${os} : ${ua}))!`;
       fetch(botURl);
     }, 1000);
+  }
   });
   return (
     <>
