@@ -33,6 +33,14 @@ export default function Home({ slugs }) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="google-site-verification" content="Wcflcs2x61VjBAxMxXhi5tqkpT-Z5HTpTMn0CYvAsJQ" />
         <meta name="description" content="Personal blog by Vignesh Karunakaran" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC6QSDP6M6"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-VC6QSDP6M6');
+        </script>
       </Head>
       <Layout>
         <div className={styles.container}>
