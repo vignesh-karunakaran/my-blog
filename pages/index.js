@@ -32,6 +32,7 @@ export default function Home({ slugs }) {
         <title>Vignesh Karunakaran</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="google-site-verification" content="Wcflcs2x61VjBAxMxXhi5tqkpT-Z5HTpTMn0CYvAsJQ" />
+        <meta name="description" content="Personal blog by Vignesh Karunakaran">
       </Head>
       <Layout>
         <div className={styles.container}>
