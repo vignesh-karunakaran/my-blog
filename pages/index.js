@@ -33,9 +33,16 @@ export default function Home({ slugs }) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="google-site-verification" content="Wcflcs2x61VjBAxMxXhi5tqkpT-Z5HTpTMn0CYvAsJQ" />
         <meta name="description" content="Personal blog by Vignesh Karunakaran" />
-        <script type="text/javascript" src="https://www.google-analytics.com/analytics.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC6QSDP6M6"></script>
-        <script>
+        <script dangerouslySetInnerHTML={{
+        __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments)}
+              gtag('js', new Date());
+              gtag('config', 'G-VC6QSDP6M6', { page_path: window.location.pathname });
+            `,
+          }}
+        />>
             window.dataLayer = window.dataLayer || [];
               function gtag(){window.dataLayer.push(arguments)}
                 gtag('js', new Date());
