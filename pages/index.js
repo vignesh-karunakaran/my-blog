@@ -9,6 +9,12 @@ import styles from '../styles/Home.module.css';
 
 export default function Home({ slugs }) {
   useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-VC6QSDP6M6', { page_path: window.location.pathname });
     const { navigator } = window;
     // const date = new Date().getDate();
     // if (localStorage.getItem('count')) {
@@ -34,21 +40,6 @@ export default function Home({ slugs }) {
         <meta name="google-site-verification" content="Wcflcs2x61VjBAxMxXhi5tqkpT-Z5HTpTMn0CYvAsJQ" />
         <meta name="description" content="Personal blog by Vignesh Karunakaran" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC6QSDP6M6"></script>
-        <script dangerouslySetInnerHTML={{
-        __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments)}
-              gtag('js', new Date());
-              gtag('config', 'G-VC6QSDP6M6', { page_path: window.location.pathname });
-            `,
-          }}
-        />>
-            window.dataLayer = window.dataLayer || [];
-              function gtag(){window.dataLayer.push(arguments)}
-                gtag('js', new Date());
-
-                gtag('config', 'G-VC6QSDP6M6');
-        </script>
       </Head>
       <Layout>
         <div className={styles.container}>
