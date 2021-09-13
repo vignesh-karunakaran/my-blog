@@ -7,10 +7,10 @@ import matter from 'gray-matter';
 import Layout from '../components/layout';
 import styles from '../styles/Home.module.css';
 
-export default function Home({ slugs }) {
+export default function Home({ slugs, isLive }) {
   useEffect(() => {
     console.log(process.env.IS_LIVE);
-    if(process.env.IS_LIVE) {
+    if(isLive) {
     window.dataLayer = window.dataLayer || [];
     function gtag(){
       dataLayer.push(arguments)
@@ -69,6 +69,7 @@ export default function Home({ slugs }) {
 export const getStaticProps = async () => {
   const files = fs.readdirSync('posts').map((filename) => filename.replace('.md', ''));
   const data = [];
+  const isLive = process.env.IS_LIVE || false;
   files.forEach((postPath) => {
     const dataObj = {};
     const markdownWithMetadata = fs.readFileSync(path.join('posts', `${postPath}.md`)).toString();
@@ -82,6 +83,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       slugs: data,
+      isLive
     },
   };
 };
