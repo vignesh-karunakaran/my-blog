@@ -9,7 +9,8 @@ import styles from '../styles/Home.module.css';
 
 export default function Home({ slugs }) {
   useEffect(() => {
-    if(process.env.VERCEL_ENV === 'production') {
+    console.log(process.env.IS_LIVE);
+    if(process.env.IS_LIVE) {
     window.dataLayer = window.dataLayer || [];
     function gtag(){
       dataLayer.push(arguments)
