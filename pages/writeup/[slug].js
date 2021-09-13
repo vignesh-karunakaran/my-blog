@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -8,8 +8,20 @@ import markedImages from 'marked-images';
 import Layout from '../../components/layout';
 
 /* eslint-disable react/no-danger */
-const Post = ({ htmlString, data }) => (
-  <>
+const Post = ({ htmlString, data, isLive, gToken }) => {
+  useEffect(() => {
+    if(isLive) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date());
+      gtag('config', gToken, { page_path: window.location.pathname });
+    }
+  });
+ 
+return (
+    <>
     <Head>
       <title>{data.title}</title>
       <meta title="description" content={data.description} />
@@ -23,7 +35,8 @@ const Post = ({ htmlString, data }) => (
       </div>
     </Layout>
   </>
-);
+ );
+};
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync('posts');
@@ -43,11 +56,15 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const parsedMarkdown = matter(markdownWithMetadata);
   marked.use(markedImages);
   const htmlString = marked(parsedMarkdown.content);
+  const isLive = process.env.IS_LIVE || false;
+  const gToken = process.env.ANALYTICS_TOKEN || null;
 
   return {
     props: {
       htmlString,
       data: parsedMarkdown.data,
+      isLive,
+      gToken
     },
   };
 };

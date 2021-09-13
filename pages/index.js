@@ -69,8 +69,8 @@ export const getStaticProps = async () => {
   const files = fs.readdirSync('posts').map((filename) => filename.replace('.md', ''));
   const data = [];
   const isLive = process.env.IS_LIVE || false;
-  const gToken = process.env.ANALYTICS_TOKEN;
-  const TelegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
+  const gToken = process.env.ANALYTICS_TOKEN || null;
+  const TelegramBotToken = process.env.TELEGRAM_BOT_TOKEN || false;
   files.forEach((postPath) => {
     const dataObj = {};
     const markdownWithMetadata = fs.readFileSync(path.join('posts', `${postPath}.md`)).toString();
