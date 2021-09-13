@@ -37,7 +37,7 @@ export default function Home({ slugs }) {
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC6QSDP6M6"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments)}
+              function gtag(){window.dataLayer.push(arguments)}
                 gtag('js', new Date());
 
                 gtag('config', 'G-VC6QSDP6M6');
