@@ -50,7 +50,7 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
                 <div className={styles.card}>
                   <Link href={`/writeup/${encodeURIComponent(slug.href)}`}>
                     <a href>
-                      <h3>{slug.title}</h3>
+                      <p className={styles.cardTitle}>{slug.title}</p>
                       <p className={styles.date}>{slug.date}</p>
                       <p>{slug.desc}</p>
                     </a>

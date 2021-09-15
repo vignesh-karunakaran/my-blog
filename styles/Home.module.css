@@ -159,9 +159,11 @@
   border-color: #6a0aff;
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 28px;
+.card .cardTitle {
+    margin: 0 0 1rem 0;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 38px;
 }
 
 .card p {
