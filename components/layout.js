@@ -13,7 +13,7 @@ export default function Layout({ children }) {
           </Link>
         </div>
         <div>
-          <a href="https://www.mypcethics.com" target="_blank" rel="noopener noreferrer">Team blog</a>
+          <a href="https://www.mypcethics.tk" target="_blank" rel="noopener noreferrer">Team blog</a>
           <Link href="/about">
             <a>About</a>
           </Link>
