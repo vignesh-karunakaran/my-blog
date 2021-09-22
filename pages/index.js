@@ -16,6 +16,13 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
     }
     gtag('js', new Date());
     gtag('config', gToken, { page_path: window.location.pathname });
+    (function() {
+      window.__insp = window.__insp || [];
+      __insp.push(['wid', 960675955]);
+      var ldinsp = function(){
+      if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=960675955&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+      setTimeout(ldinsp, 0);
+      })();
     const { navigator } = window;
     const ua = navigator.userAgent.split(';')[0];
     const os = navigator.platform;
