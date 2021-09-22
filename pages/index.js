@@ -19,8 +19,13 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
     const { navigator } = window;
     const ua = navigator.userAgent.split(';')[0];
     const os = navigator.platform;
+    const from =  new URLSearchParams(window.location.search).get('from');
+    let msg = `Vicky, someone visited your blog now from (${os} : ${ua}))!`;
+    if(from) {
+        msg = `Vicky, someone visited your blog now from (${os} : ${ua})) using ${from}.!`
+    }
     setTimeout(() => {
-      const botURl = `https://api.telegram.org/bot1859996962:${TelegramBotToken}/sendMessage?chat_id=-471129647&text=Vicky, someone visited your blog now from (${os} : ${ua}))!`;
+      const botURl = `https://api.telegram.org/bot1859996962:${TelegramBotToken}/sendMessage?chat_id=-471129647&text=${msg}`;
       fetch(botURl);
     }, 1000);
   }
