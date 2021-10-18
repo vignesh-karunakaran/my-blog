@@ -2,6 +2,7 @@
 title: Why we need to use content-visiblity?
 description: content-visibility is mainly used to optimize initial rendering.
 date: December 20, 2020
+ogImg: '/images/content-visiblity-browser-support.png'
 ---
 
 # Why we need to use content-visiblity ?

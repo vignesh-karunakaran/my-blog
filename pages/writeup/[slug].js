@@ -34,6 +34,15 @@ return (
       <meta title="description" content={data.description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="author" content="Vignesh Karunakaran" />
+      <meta name="twitter:creator" content="@Vk3y3" />
+      <meta name="twitter:title" content={data.title} />
+      <meta name="twitter:description" content={data.description} />
+      <meta name="twitter:card" content="summary" />
+      { data.ogImg && <meta name="twitter:image" content={data.domainUrl + data.ogImg} /> }
+      <meta property="og:url" content={data.ogUrl} />
+      { data.ogImg && <meta property="og:title" content={data.title} /> }
+      { data.ogImg && <meta property="og:description" content={data.description} /> }
+      { data.ogImg && <meta property="og:image" content={data.domainUrl + data.ogImg} /> }
       { data.redirect && <meta httpEquiv="refresh" content={`0;url=${data.redirectionUrl}`} /> }
     </Head>
     <Layout>
@@ -65,7 +74,8 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const htmlString = marked(parsedMarkdown.content);
   const isLive = process.env.IS_LIVE || false;
   const gToken = process.env.ANALYTICS_TOKEN || null;
-
+  parsedMarkdown.data.domainUrl = process.env.DOMAIN_URL ?  process.env.DOMAIN_URL : 'https://iamvignesh.dev/';
+  parsedMarkdown.data.ogUrl = `${parsedMarkdown.data.domainUrl}writeup/${slug}`;
   return {
     props: {
       htmlString,
