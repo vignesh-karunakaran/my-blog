@@ -17,6 +17,7 @@ const Post = ({ htmlString, data, isLive, gToken }) => {
       }
       gtag('js', new Date());
       gtag('config', gToken, { page_path: window.location.pathname });
+      
       (function() {
       window.__insp = window.__insp || [];
       __insp.push(['wid', 960675955]);
@@ -35,6 +36,13 @@ return (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="author" content="Vignesh Karunakaran" />
       { data.redirect && <meta httpEquiv="refresh" content={`0;url=${data.redirectionUrl}`} /> }
+      { data.ogImg && <meta property="og:title" content={data.title} /> }
+      { data.ogImg && <meta property="og:description" content={data.description} /> }
+      { data.ogImg && <meta property="og:image" content={data.ogImg} />}
+      <meta name="twitter:title" content={data.title} />
+      <meta name="twitter:description" content={data.description} />
+      <meta name="twitter:card" content={data.description}></meta>
+      { data.ogImg && <meta name="twitter:image" content={data.ogImg} /> }
     </Head>
     <Layout>
       <div className="blog container">
