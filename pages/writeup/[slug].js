@@ -32,6 +32,7 @@ return (
     <Head>
       <title>{data.title}</title>
       <meta title="description" content={data.description} />
+      <meta content="text/html; charset=UTF-8" name="Content-Type" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="author" content="Vignesh Karunakaran" />
       <meta name="twitter:creator" content="@Vk3y3" />
