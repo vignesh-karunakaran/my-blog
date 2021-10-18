@@ -38,7 +38,7 @@ return (
       <meta name="twitter:creator" content="@Vk3y3" />
       <meta name="twitter:title" content={data.title} />
       <meta name="twitter:description" content={data.description} />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       { data.ogImg && <meta name="twitter:image" content={data.domainUrl + data.ogImg} /> }
       <meta property="og:url" content={data.ogUrl} />
       { data.ogImg && <meta property="og:title" content={data.title} /> }
