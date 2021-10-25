@@ -26,10 +26,7 @@ a {
     margin: 5rem 25rem;
     border: #eee solid 1px;
     max-width: 1360px;
-    border-top: none;
-    border-bottom: #000 solid 1px;
-    border-left: none;
-    border-right: none;
+    border: none;
     backdrop-filter: blur(40px);
 }
 
