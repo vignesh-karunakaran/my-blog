@@ -41,6 +41,11 @@
   overflow: hidden;
 }
 
+.post .header {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 
 .headerCover {
   position: absolute;
@@ -57,6 +62,10 @@
   opacity: .5;
   z-index: 0;
 }
+
+.post .headerCover {
+  background-image: none;
+}
 .headerTitleCover {
   position: relative;
   width: 40vw;
@@ -65,6 +74,9 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+}
+.post .headerTitleCover {
+  width: 70vw;
 }
 .footer img {
   margin-left: 0.5rem;

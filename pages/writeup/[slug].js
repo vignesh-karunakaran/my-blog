@@ -6,6 +6,7 @@ import Head from 'next/head';
 import marked from 'marked';
 import markedImages from 'marked-images';
 import Layout from '../../components/layout';
+import styles from '../../styles/Home.module.css';
 
 /* eslint-disable react/no-danger */
 const Post = ({ htmlString, data, isLive, gToken }) => {
@@ -46,6 +47,15 @@ return (
       { data.redirect && <meta httpEquiv="refresh" content={`0;url=${data.redirectionUrl}`} /> }
     </Head>
     <Layout>
+    <div class={styles.post}>
+    <header className={styles.header}>
+      <div className={styles.headerCover}></div>
+      <div className={styles.headerTitleCover}>
+        <h1 className={styles.title}>{data.title}</h1>
+      </div>
+    </header>
+    </div>
+
       <div className="blog container">
         <div dangerouslySetInnerHTML={{ __html: htmlString }} />
       </div>

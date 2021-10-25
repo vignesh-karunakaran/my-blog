@@ -23,10 +23,10 @@ a {
 .blog.container {
     min-height: 100vh;
     padding: 0 0.5rem;
-    margin: auto 25rem;
+    margin: 5rem 25rem;
     border: #eee solid 1px;
     max-width: 1360px;
-    border-top: #000 solid 1px;
+    border-top: none;
     border-bottom: #000 solid 1px;
     border-left: none;
     border-right: none;
@@ -111,6 +111,7 @@ a {
     margin: 0 auto;
     margin-bottom: 30%;
     height: 300px;
+    padding: 2rem;
     border-radius: 20px;
 }
 .profile-pic {
