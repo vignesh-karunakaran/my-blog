@@ -14,7 +14,7 @@ export default function Custom404() {
           </div>
           <div className="profile-desc">
             <h2>Hello world, I am Vignesh Karunakaran</h2>
-            <p>I work as a front-end developer at Zoho Corporation, Passion for crafting new tech and building secure, high-quality web apps.</p>
+            <p>I work as a front-end developer at Zoho. Admirer of art and nature.</p>
           </div>
         </div>
       </div>
