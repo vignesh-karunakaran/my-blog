@@ -7,7 +7,7 @@ ogImg: '.././budha.jpg'
 
 ### From where to start?
 
-The hope of god differs from religion/country, but all dots are connected with one single thread called as faith, miracles are still happening in everyone's life but still some deny to accept it, some will deny the denial by people who don't accept it, in this post i am not going to support or deny any religion/god, i am just searching myself with this question of `whoami` in a spritual from which i got some answers which will help others to gain a clear vision or  will help to skip some steps to attain true awareness.
+The god may differs from religion/country, but all dots are connected with one single thread called as faith, miracles are still happening in everyone's life but still some deny to accept it, some will deny the denial by people who don't accept it, in this post i am not going to support or deny any religion/god, i am just searching myself with this question of `whoami` in a spritual from which i got some answers which will help others to gain a clear vision or  will help to skip some steps to attain true awareness.
 
 
 I will start with from my birth,where i born at thaipoosam which is consider as special day for the people who is worshiping lord murugan (GOD), so from that moment after when i started walking my grand father filed
