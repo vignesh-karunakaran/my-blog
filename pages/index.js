@@ -61,6 +61,7 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
 
             <div className={styles.aligncenter}>
               {slugs.map((slug) => (
+                slug.hide === false &&
                 <div className={styles.card}>
                   <Link href={`/writeup/${encodeURIComponent(slug.href)}`}>
                     <a href>
@@ -92,6 +93,7 @@ export const getStaticProps = async () => {
     dataObj.title = parsedMarkdownMeta.title;
     dataObj.desc = parsedMarkdownMeta.description;
     dataObj.date = parsedMarkdownMeta.date;
+    dataObj.hide = parsedMarkdownMeta.hide;
     dataObj.href = postPath;
     data.push(dataObj);
   });

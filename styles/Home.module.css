@@ -25,6 +25,7 @@
   display: inline-flex;
   flex-wrap: wrap;
   max-width: 60vw;
+  justify-content: space-around;
 }
 
 .header {
@@ -182,6 +183,12 @@
 
 .logo {
   height: 1em;
+}
+
+@media (max-width: 1300px) {
+  .main > div {
+    max-width: 95vw;
+  }
 }
 
 @media (max-width: 600px) {

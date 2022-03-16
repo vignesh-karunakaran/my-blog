@@ -2,6 +2,7 @@
 title: What is cross site scripting?
 date: January 20, 2021
 description: Cross-site Scripting (XSS) is a javascript code injection attack.
+hide: false
 ---
 
 

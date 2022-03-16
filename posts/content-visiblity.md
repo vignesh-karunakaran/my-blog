@@ -3,6 +3,7 @@ title: Why we need to use content-visiblity?
 description: content-visibility is mainly used to optimize initial rendering.
 date: December 20, 2020
 ogImg: 'images/content-visiblity-browser-support.png'
+hide: false
 ---
 Applying `content-visiblity: auto` to an element tells the browser to skip rendering work for that particular element until it is scrolled into the viewport,
 we can use it for each section, where it optimizes initial rendering.
