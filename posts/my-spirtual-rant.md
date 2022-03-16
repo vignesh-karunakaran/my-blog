@@ -1,7 +1,7 @@
 ---
 title: My spritual rant
 description: My view on sprituality.
-date: December 20, 2020
+date: Mar 16, 2022
 ogImg: '.././budha.jpg'
 ---
 
