@@ -77,7 +77,14 @@ a {
 }
 
 .blog.container>div>p {
-    text-align: center;
+    text-align: left;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.blog.container>div>h3 {
+    font-size: 32px;
+    line-height: 48px;
 }
 
 .blog.container>div>p>img {
