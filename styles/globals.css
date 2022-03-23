@@ -139,6 +139,9 @@ a {
 .profile-desc h2 {
     margin-bottom: 0;
 }
+.main > div {
+    justify-content: end;
+}
 @media screen and (max-width: 1300px) {
     .blog.container {
         margin: 0;
@@ -155,10 +158,5 @@ a {
         flex-direction: column;
         padding: 5% 4%;
         width: 70%;
-    }
-}
-@media screen and (max-width: 650px) {
-    .main > div {
-        justify-content: center;
     }
 }

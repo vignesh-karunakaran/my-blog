@@ -24,8 +24,8 @@
 .main > div {
   display: inline-flex;
   flex-wrap: wrap;
-  max-width: 60vw;
-  justify-content: space-around;
+  max-width: 80vw;
+  justify-content: end;
 }
 
 .header {
@@ -187,7 +187,8 @@
 
 @media (max-width: 1300px) {
   .main > div {
-    max-width: 95vw;
+    max-width: 80vw;
+    justify-content: center;
   }
 }
 
