@@ -26,7 +26,7 @@ As a god i will create people who belives in god and pray to him which will crea
 
 ### To attain Enlightment:
 
-From the ancient siddhars/rishis, to modern world only way to attain enlightment is by meditation, we can awake enlightment by which we can posses ourself more awareness, sustain the excessive knowledge and even we can reprogram the reality with our postive awareness and focus, it may sounds like crazy but for some it is the unacceptable truth, unsolved mystics in science is classifed under quantum physics where we still can't figure out those answers, from occult to prayers everything falls under one criteria which we call it as faith, the meditation well posses the higher form when we practice it with intense. their you will find the answer of void. concentrate on anahata at every moment if possible, their are many spiritual people have attended their enlightment.
+From the ancient siddhars/rishis, to modern world only way to attain enlightment is by meditation, we can awake enlightment by which we can posses ourself more awareness, sustain the excessive knowledge and even we can reprogram the reality with our postive awareness and focus, it may sounds like crazy but for some it is the unacceptable truth, unsolved mystics in science is classifed under quantum physics where we still can't figure out those answers, from occult to prayers everything falls under one criteria which we call it as faith, the meditation well posses the higher form when we practice it with intense. their you will find the answer of void. concentrate on ajna at every moment if possible, their are many spiritual people have attended their enlightment.
 
 ### My view on vallalar:
 
