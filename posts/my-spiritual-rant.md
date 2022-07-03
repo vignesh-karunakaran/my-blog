@@ -1,5 +1,5 @@
 ---
-title: apocryphon of vicky
+title: Apocryphon of vicky
 description: My view on spirituality.
 date: Mar 16, 2022
 ogImg: '.././budha.jpg'
