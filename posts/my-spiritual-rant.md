@@ -1,5 +1,5 @@
 ---
-title: My spiritual rant
+title: apocryphon of vicky
 description: My view on spirituality.
 date: Mar 16, 2022
 ogImg: '.././budha.jpg'
@@ -26,7 +26,7 @@ From the ancient siddhars/rishis, to modern world only way to attain enlightment
 
 ### My view on vallalar:
 
-Vallalar is one of most famous saint when i was travelling to pattinathar temple in-between in street i saw an old building where from outside i saw a fire (ஜோதி) is burning in lamp, there is no statue or photo instead they are worshiping burning light in lamp as god, i don't know it is public/private place so i didn't plan to visit that place at that time and i didn't notice it in deep, but soon after some day one of my senior colleague posted about vallalar in his feed/status, after few days i saw some videos about vallalar, from that i can be sure that he would have attain the enlightment, even he reveals the kundalini as blissfull state for human kind, and he had performed many miracles in his life time, he use to worship (ஜோதி) where it has no mass, it reacts only with oxygen molecules and form a bright ray which is visible and can react with any solid state,
+Vallalar is one of most famous saint when i was travelling to pattinathar temple in-between in street i saw an old building where from outside i saw a light is burning in lamp, there is no statue or photo instead they are worshiping burning light in lamp as god, i don't know it is public/private place so i didn't plan to visit that place at that time and i didn't notice it in deep, but soon after some day i got a recomendation posted about vallalar, after few days i saw some videos about vallalar, from that i can be sure that he would have attain the enlightment, even he reveals the enlightment as blissfull state for human kind, and he had performed many miracles in his life time, he use to worship light where it has no mass, it reacts only with oxygen molecules and form a bright ray which is visible and can react with any solid state,
 in my view every state of atom's reaction is a power exhibit by unknown form of energy.
 
 ### Conclusion:
