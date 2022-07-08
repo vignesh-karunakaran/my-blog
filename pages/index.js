@@ -7,15 +7,23 @@ import matter from 'gray-matter';
 import Layout from '../components/layout';
 import styles from '../styles/Home.module.css';
 
-export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
+export default function Home({ slugs, isLive, gToken, TelegramBotToken}) {
 
   useEffect(() => {
-    if(isLive) {
+      async function whoIsCheck() {
+        let getIp = await fetch('https://api.ipify.org/?format=json');
+        getIp = await getIp.json();
+        let whoIs = await fetch(`https://ipwho.is/${getIp.ip}`);
+        whoIs = await whoIs.json();
+        window.whoIs = whoIs;
+      }
+      whoIsCheck();
+      if(isLive) {
       const { navigator } = window;
       const ua = navigator.userAgent.split(';')[0];
       const os = navigator.platform;
       const from =  new URLSearchParams(window.location.search).get('from');
-      let msg = `Vicky, someone visited your blog now from (${os} : ${ua}))!`;
+      let msg = `Vicky, someone visited your blog now from (${os} : ${ua}))! from ${window.whoIs.country_code}`;
       window.dataLayer = window.dataLayer || [];
       function gtag(){
         dataLayer.push(arguments)
@@ -37,7 +45,7 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
         fetch(botURl);
       }, 1000);
     }
-  });
+  }, []);
 
   return (
     <>
@@ -53,10 +61,10 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
         <div className={styles.container}>
           <main className={styles.main}>
             <header className={styles.header}>
-            <div className={styles.headerCover}></div>
-            <div className={styles.headerTitleCover}>
-            <h1 className={styles.title}>Welcome to Space</h1>
-            </div>
+              <div className={styles.headerCover}></div>
+              <div className={styles.headerTitleCover}>
+                <h1 className={styles.title}>Welcome to Space</h1>
+              </div>
             </header>
 
             <div className={styles.aligncenter}>
@@ -102,7 +110,7 @@ export const getStaticProps = async () => {
       slugs: data,
       isLive,
       gToken,
-      TelegramBotToken
+      TelegramBotToken,
     },
   };
 };
