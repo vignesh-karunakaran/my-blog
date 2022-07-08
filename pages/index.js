@@ -10,12 +10,20 @@ import styles from '../styles/Home.module.css';
 export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
 
   useEffect(() => {
+    whoIsCheck();
     if(isLive) {
+      var whoIs;
+       async function whoIsCheck() {
+      let getIp = await fetch('https://api.ipify.org/?format=json');
+      getIp = await getIp.json();
+      whoIs = await fetch(`https://ipwho.is/${getIp.ip}`);
+      whoIs = await whoIs.json();
+      }
       const { navigator } = window;
       const ua = navigator.userAgent.split(';')[0];
       const os = navigator.platform;
       const from =  new URLSearchParams(window.location.search).get('from');
-      let msg = `Vicky, someone visited your blog now from (${os} : ${ua}))!`;
+      let msg = `Vicky, someone visited your blog now from (${os} : ${ua}))! from ${whoIs.country_code}`;
       window.dataLayer = window.dataLayer || [];
       function gtag(){
         dataLayer.push(arguments)
