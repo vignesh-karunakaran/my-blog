@@ -110,7 +110,7 @@ export const getStaticProps = async () => {
       slugs: data,
       isLive,
       gToken,
-      TelegramBotToken
+      TelegramBotToken,
     },
   };
 };
