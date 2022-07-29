@@ -85,7 +85,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const htmlString = marked(parsedMarkdown.content);
   const isLive = process.env.IS_LIVE || false;
   const gToken = process.env.ANALYTICS_TOKEN || null;
-  parsedMarkdown.data.domainUrl = process.env.DOMAIN_URL ?  process.env.DOMAIN_URL : 'https://iamvignesh.dev/';
+  parsedMarkdown.data.domainUrl = process.env.DOMAIN_URL || null;
   parsedMarkdown.data.ogUrl = `${parsedMarkdown.data.domainUrl}writeup/${slug}`;
   return {
     props: {
