@@ -11,7 +11,8 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
 
 
   useEffect(() => {
-
+      var welcomeNote = new SpeechSynthesisUtterance("Welcome");
+      speechSynthesis.speak(welcomeNote);
         if(isLive) {
           const { navigator } = window;
           const ua = navigator.userAgent.split(';')[0];
