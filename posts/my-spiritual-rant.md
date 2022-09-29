@@ -24,7 +24,7 @@ After the purpose got accomplished that soul will break the birth cycle and be t
 
 As a god, I will create people who believe in god and pray to him which will create a strong purpose of existence for the god, and also I will create both atheist and agnostic people who will deny the creator's existence. because even religious or people who have belief won't recall the existence of god, but atheist and agnostic does it without their knowledge.
 
-### To attain Enlightment:
+### To attain Enlightenment:
 
 From the ancient siddhars/rishis, to the modern world only way to attain enlightenment is by meditation, we can awake enlightenment by which we can possess ourself more awareness, sustain the excessive knowledge and even we can reprogram reality with our positive awareness and focus, it may sound like crazy but for some, it is the unacceptable truth, unsolved mystics in science is classified under quantum physics where we still can't figure out those answers, from the occult to prayers everything falls under one criterion which we call it as faith, the meditation well possess the higher form when we practice it with intense. there you will find the answer of the void. concentrate on ajna at every moment if possible, many spiritual people have attended their enlightenment.
 
