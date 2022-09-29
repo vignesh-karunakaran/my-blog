@@ -10,6 +10,10 @@ hide: true
 
 The god may differ from religion/country, but all dots are connected with one single thread called as faith, miracles are still happening in everyone's life but still some deny to accept it, some will deny the denial by people who don't accept it, in this post i am not going to support any religion/god, i am just searching myself with this question of `whoami` in my spiritual path from which i got some answers which will help others to gain a clear vision or  will help to skip some steps to attain true awareness.
 
+I will start with from my birth, where i born at thaipoosam which is consider as special day for the people who choosing spiritual way, from age five, my grand father use to fill me in his vinakyar temple where he is so called as darma gata(In simple words - he is Manager for the temple) and he his devotee of Kirupanandha Variyar who is spiritual teacher present in our nearby street.
+
+so my grand father use to convey some miracle done by some mystic people to me when i was in young, till my fiveth grade i use to study in the temple, there i observe everyone who comes to workship, i can judge there suffering with their intense of workship towards the god, but still some prayers are still unanswered., After my grand father passed away we switched he position to someone who is present nearby the temple who can able to manage the expense because at that time we had a financial crisis so with no choice we gave that position to another person who is spirtually active at that time, few weeks after his death i started my question of `what is purpose of life?` from my grand father death who always trusted the nature as a godly power.
+
 
 ### What if i am a god and what is life?
 
