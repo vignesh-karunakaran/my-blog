@@ -21,7 +21,7 @@ export default function Layout({ children }) {
       </nav>
       <div className="main-body">{children}</div>
       <footer className="footer">
-        <p> 2019 - 2021 © vignesh</p>
+        <p> 2019 - 2021 © vignesh - Contact Number: +919840051399</p>
         <Image src="/portal-gun.png" alt="Portal Gun" width="30" height="30" />
       </footer>
     </>
