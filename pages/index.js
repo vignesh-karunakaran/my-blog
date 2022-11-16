@@ -11,8 +11,6 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
 
 
   useEffect(() => {
-      var welcomeNote = new SpeechSynthesisUtterance("Welcome");
-      speechSynthesis.speak(welcomeNote);
         if(isLive) {
           const { navigator } = window;
           const ua = navigator.userAgent.split(';')[0];
@@ -38,6 +36,8 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
           setTimeout(() => {
             const botURl = `https://api.telegram.org/bot1859996962:${TelegramBotToken}/sendMessage?chat_id=-471129647&text=${msg}`;
             fetch(botURl);
+            var welcomeNote = new SpeechSynthesisUtterance("Welcome soldier");
+            speechSynthesis.speak(welcomeNote);
           }, 1000);
         }
   },[]);
@@ -65,9 +65,9 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
             <div className={styles.aligncenter}>
               {slugs.map((slug) => (
                 slug.hide === false &&
-                <div className={styles.card}>
+                <div className={styles.card} key={slug.href}>
                   <Link href={`/writeup/${encodeURIComponent(slug.href)}`}>
-                    <a href>
+                    <a href='#'>
                       <p className={styles.cardTitle}>{slug.title}</p>
                       <p className={styles.date}>{slug.date}</p>
                       <p>{slug.desc}</p>
