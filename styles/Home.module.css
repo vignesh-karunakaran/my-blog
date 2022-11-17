@@ -24,8 +24,9 @@
 .main > div {
   display: inline-flex;
   flex-wrap: wrap;
-  max-width: 80vw;
+  max-width: 1200px;
   justify-content: center;
+  width: 80%;
 }
 
 .header {
