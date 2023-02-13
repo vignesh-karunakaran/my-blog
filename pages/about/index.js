@@ -7,7 +7,6 @@ export default function Custom404() {
   return (
     <Layout>
       <div className="not-found">
-        <h1>ABOUT ME ?</h1>
         <div className="intro-card">
           <div className="profile-pic">
             <Image src="/me.jpg" alt="Picture of the author" width="150" height="150" />
