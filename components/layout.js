@@ -13,7 +13,6 @@ export default function Layout({ children }) {
           </Link>
         </div>
         <div>
-          <a href="https://www.mypcethics.in" target="_blank" rel="noopener noreferrer">Team blog</a>
           <Link href="/about">
             <a>About</a>
           </Link>
@@ -22,7 +21,15 @@ export default function Layout({ children }) {
       <div className="main-body">{children}</div>
       <footer className="footer">
         <p> 2019 - 2021 © vignesh</p>
-        <Image src="/portal-gun.png" alt="Portal Gun" width="30" height="30" />
+        <a href="https://wa.me/919840051399?text=Hi vicky">
+          <Image src="/whatsapp-logo.svg" alt="Whatsapp" width="30" height="30" />
+        </a>
+        <a href="https://github.com/vignesh-karunakaran/" target="_blank">
+          <Image src="/github.svg" alt="github link" width="30" height="30" />
+        </a>
+        <a href="https://www.linkedin.com/in/vignesh-karunakaran-4730039b/" target="_blank">
+          <Image src="/linkedin.svg" alt="linkedin" width="25" height="25" />
+        </a>
       </footer>
     </>
   );
