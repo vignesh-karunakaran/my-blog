@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import Head from 'next/head';
 import fs from 'fs';
 import Link from 'next/link';
@@ -8,8 +8,10 @@ import Layout from '../components/layout';
 import styles from '../styles/Home.module.css';
 
 export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
-
-
+  useLayoutEffect(() => {
+    var welcomeNote = new SpeechSynthesisUtterance("Welcome");
+    speechSynthesis.speak(welcomeNote);
+  });
   useEffect(() => {
         if(isLive) {
           const { navigator } = window;
@@ -36,8 +38,6 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
           setTimeout(() => {
             const botURl = `https://api.telegram.org/bot1859996962:${TelegramBotToken}/sendMessage?chat_id=-471129647&text=${msg}`;
             fetch(botURl);
-            var welcomeNote = new SpeechSynthesisUtterance("Welcome soldier");
-            speechSynthesis.speak(welcomeNote);
           }, 1000);
         }
   },[]);
@@ -65,15 +65,15 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
             <div className={styles.aligncenter}>
               {slugs.map((slug) => (
                 slug.hide === false &&
-                <div className={styles.card} key={slug.href}>
-                  <Link href={`/writeup/${encodeURIComponent(slug.href)}`}>
+                <Link href={`/writeup/${encodeURIComponent(slug.href)}`}>
+                  <div className={styles.card} key={slug.href}>
                     <a href={`/writeup/${encodeURIComponent(slug.href)}`}>
                       <p className={styles.cardTitle}>{slug.title}</p>
                       <p className={styles.date}>{slug.date}</p>
                       <p>{slug.desc}</p>
                     </a>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               ))}
             </div>
           </main>

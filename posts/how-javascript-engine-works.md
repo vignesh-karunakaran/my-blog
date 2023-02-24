@@ -11,20 +11,20 @@ Browser does have a javascript runtime environment (Eg:- v8 engine) that compile
 
 
 
-![](../images/how-meme.png)
+![How?](../images/how-meme.png "How meme")
 
 
 ## JS ENGINE:
 
 #### (CODE -> PARSING -> COMPILATION -> EXECUTION)
 
-![](../images/v8-engine.png)
+![V8 engine](../images/v8-engine.png "V8 engine")
 
 ## Parsing:
 
 Where javascript code is converted into tokens, using this tokens syntax parser constructs AST (Abstract syntax tree).
 
-![](../images/ast.png)
+![AST](../images/ast.png "AST")
 
 ## Compliation:
 
@@ -54,7 +54,8 @@ Where it has a [garbage collector](https://medium.com/@_lrlna/garbage-collection
 A call stack queue is where the functions are declared and executed in a queue.
 
 
-![](../images/call-stack.jpg)
+![Call stack](../images/call-stack.jpg "Call stack")
+
 
 
 

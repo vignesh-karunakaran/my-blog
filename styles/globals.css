@@ -91,6 +91,7 @@ a {
     width: 95%;
     height: 50%;
     border-radius: 1%;
+    object-fit: scale-down;
 }
 
 .footer {
