@@ -8,10 +8,6 @@ import Layout from '../components/layout';
 import styles from '../styles/Home.module.css';
 
 export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
-  useLayoutEffect(() => {
-    var welcomeNote = new SpeechSynthesisUtterance("Welcome");
-    speechSynthesis.speak(welcomeNote);
-  });
   useEffect(() => {
         if(isLive) {
           const { navigator } = window;
