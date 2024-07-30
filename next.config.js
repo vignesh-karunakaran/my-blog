@@ -9,7 +9,4 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  javascript: {
-    ignoreDuringBuilds: true,
-  }
 };
