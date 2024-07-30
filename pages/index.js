@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import fs from 'fs';
 import Link from 'next/link';
@@ -63,11 +63,11 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
                 slug.hide === false &&
                 <Link href={`/writeup/${encodeURIComponent(slug.href)}`}>
                   <div className={styles.card} key={slug.href}>
-                    <a href={`/writeup/${encodeURIComponent(slug.href)}`}>
+                    <div>
                       <p className={styles.cardTitle}>{slug.title}</p>
                       <p className={styles.date}>{slug.date}</p>
                       <p>{slug.desc}</p>
-                    </a>
+                    </div>
                   </div>
                 </Link>
               ))}

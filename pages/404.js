@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import Layout from '../components/layout';
 import styles from '../styles/Home.module.css';
-import Image from 'next/image';
 
 export default function Custom404() {
   return (
