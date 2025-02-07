@@ -12,10 +12,17 @@ export default function Layout({ children }) {
             Home
           </Link>
         </div>
+        <div className='flex-column'>
+        <div>
+          <Link href="/notes">
+            Notes
+          </Link>
+        </div>
         <div>
           <Link href="/about">
             About
           </Link>
+        </div>
         </div>
       </nav>
       <div className="main-body">{children}</div>

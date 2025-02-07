@@ -166,8 +166,7 @@
 .card:active {
   color: #bcc8d6;
   border-color: #4b6a8e;
-  transform: scale(1.1);
-  box-shadow: inset 0px -1px 20px 7px;
+  box-shadow: inset 0px -1px 20px 0px;
 }
 
 .card .cardTitle {
