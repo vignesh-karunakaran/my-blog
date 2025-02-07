@@ -48,6 +48,7 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
         <meta name="author" content="Vignesh Karunakaran" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC6QSDP6M6"></script>
       </Head>
+      <div className='home-page'>
       <Layout>
         <div className={styles.container}>
           <main className={styles.main}>
@@ -75,6 +76,7 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
           </main>
         </div>
       </Layout>
+      </div>
     </>
   );
 }
