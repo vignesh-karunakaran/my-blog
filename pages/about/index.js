@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Layout from '../../components/layout';
 
-export default function Custom404() {
+export default function About() {
   return (
     <Layout>
       <div className="not-found">

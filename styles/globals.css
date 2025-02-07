@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 html {
     font-size: 17px;
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 html,
 body {
@@ -146,6 +149,10 @@ a {
 }
 .main > div {
     justify-content: end;
+}
+.flex-column {
+    display: flex;
+    flex-direction: row;
 }
 @media screen and (max-width: 1300px) {
     .blog.container {
