@@ -27,7 +27,7 @@ export default function Layout({ children }) {
       </nav>
       <div className="main-body">{children}</div>
       <footer className="footer">
-        <p> 2019 - 2024 © vignesh</p>
+        <p>Vignesh Karunakaran</p>
         <a href="https://wa.me/919840051399?text=Hi vicky">
           <Image src="/whatsapp-logo.svg" alt="Whatsapp" width="24" height="24" />
         </a>
