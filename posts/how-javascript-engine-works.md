@@ -28,7 +28,7 @@ Where javascript code is converted into tokens, using this tokens syntax parser 
 
 ## Compliation:
 
-#### JS is interpretted/compiled ?
+#### JS is interpretted / compiled ?
 
 JS is both interpretter and compiler.
 

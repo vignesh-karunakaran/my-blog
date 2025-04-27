@@ -96,14 +96,17 @@ a {
     line-height: 32px;
 }
 
-.blog.container>div>h3 {
+.blog.container>div>h3,
+ .blog.container>div>h2, .blog.container>div>h4 {
     font-size: 32px;
     line-height: 48px;
+    color: #88ffea;
 }
 
 .blog.container>div>p>img {
-    width: 95%;
-    height: 50%;
+    max-width: 80vh;
+    width: 80%;
+    height: fit-content;
     border-radius: 1%;
     object-fit: scale-down;
 }
@@ -124,6 +127,7 @@ a {
 .footer p {
     font-size: 17px;
     margin-right: 5px;
+    color: #88ffea;
 }
 
 .intro-card {
@@ -191,9 +195,9 @@ a {
 .note-container {
     margin: 50px auto;
     padding: 30px;
-    border: 1px solid #88ffea;
     color: #88ffea;
-    border-radius: 6px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.1);
 }
 .note-desc {
     text-decoration: none;
@@ -220,7 +224,7 @@ a {
     font-size: 1.5em;
     font-weight: bold;
     margin-top: 10px;
-    color: #fff;
+    color: #88ffea;
 }
 
 @media screen and (max-width: 600px) {
@@ -245,6 +249,9 @@ a {
     .about-text-container h3,
     .about-text-container p {
         text-align: center;
+    }
+    .blog.container {
+        margin: 0 5%;
     }
 }
 
