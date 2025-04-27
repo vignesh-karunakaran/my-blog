@@ -48,7 +48,7 @@ return (
       { data.redirect && <meta httpEquiv="refresh" content={`0;url=${data.redirectionUrl}`} /> }
     </Head>
     <Layout>
-    <div class={styles.post}>
+    <div className={styles.post}>
     <header className={styles.header}>
       <div className={styles.headerCover}></div>
       <div className={styles.headerTitleCover}>
