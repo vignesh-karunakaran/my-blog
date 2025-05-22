@@ -13,6 +13,11 @@ const noteList = [
         desc: "writing down every uuid",
         link: "https://eieio.games/blog/writing-down-every-uuid/",
         tags: ["JS", "code"]
+    },
+    {
+        desc: "Big-O Algorithm Complexity cheat sheet",
+        link: "https://www.bigocheatsheet.com/",
+        tags: ["JS", "code"]
     }
 ];
 export default noteList;
