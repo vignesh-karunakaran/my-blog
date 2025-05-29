@@ -23,7 +23,12 @@ export default function Layout({ children }) {
             About
           </Link>
         </div>
+        <div>
+          <Link href="/resume">
+            Resume
+          </Link>
         </div>
+      </div>
       </nav>
       <div className="main-body">{children}</div>
       <footer className="footer">
