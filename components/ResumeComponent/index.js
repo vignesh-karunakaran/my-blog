@@ -13,7 +13,6 @@ const ResumeComponent = () => {
         <h1 className="resume-name">Vignesh K</h1>
         <p className="resume-tagline">Resolver, Optimist</p>
         <div className="contact-info">
-          <p>No 19, Srinivasa Raghavan street, Perambur, Chennai 600011.</p>
           <p>+917904252672</p>
           <p>official2vignesh@gmail.com</p>
         </div>
