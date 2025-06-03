@@ -55,7 +55,7 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
             <header className={styles.header}>
             <div className={styles.headerCover}></div>
             <div className={styles.headerTitleCover}>
-            <h1 className={styles.title}>Hi Folks👋🏼</h1>
+            <h1 className={styles.title}>Hi Folks</h1>
             </div>
             </header>
 
