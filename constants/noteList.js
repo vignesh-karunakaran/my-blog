@@ -18,6 +18,16 @@ const noteList = [
         desc: "Big-O Algorithm Complexity cheat sheet",
         link: "https://www.bigocheatsheet.com/",
         tags: ["JS", "code"]
+    },
+    {
+        desc: "GPU Fundamentals",
+        link: "https://jax-ml.github.io/scaling-book/gpus/",
+        tags: ["code"]
+    },
+    {
+        desc: "Navigator sendBeacon",
+        link: "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon",
+        tags: ["js", "code"]
     }
 ];
 export default noteList;
