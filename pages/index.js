@@ -35,6 +35,7 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
             const botURl = `https://api.telegram.org/bot1859996962:${TelegramBotToken}/sendMessage?chat_id=-471129647&text=${msg}`;
             fetch(botURl);
           }, 1000);
+          //Vibrate navigation api support
           navigator.vibrate([
   100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100,
 ]);
