@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
+import Script from 'next/script';
 import fs from 'fs';
 import Link from 'next/link';
 import path from 'path';
@@ -45,8 +46,8 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
         <meta name="google-site-verification" content="Wcflcs2x61VjBAxMxXhi5tqkpT-Z5HTpTMn0CYvAsJQ" />
         <meta name="description" content="Personal blog by Vignesh Karunakaran" />
         <meta name="author" content="Vignesh Karunakaran" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC6QSDP6M6"></script>
       </Head>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VC6QSDP6M6" strategy="afterInteractive" />
       <div className='home-page'>
       <Layout>
         <div className={styles.container}>
@@ -61,8 +62,8 @@ export default function Home({ slugs, isLive, gToken, TelegramBotToken }) {
             <div className={styles.aligncenter}>
               {slugs.map((slug) => (
                 slug.hide === false &&
-                <Link href={`/writeup/${encodeURIComponent(slug.href)}`}>
-                  <div className={styles.card} key={slug.href}>
+                <Link key={slug.href} href={`/writeup/${encodeURIComponent(slug.href)}`}>
+                  <div className={styles.card}>
                     <div>
                       <p className={styles.cardTitle}>{slug.title}</p>
                       <p className={styles.date}>{slug.date}</p>
