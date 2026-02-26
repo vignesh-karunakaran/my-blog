@@ -9,11 +9,12 @@
 
 .date {
   font-size: 1rem;
-  color: #ececf3;
+  color: var(--text-color);
+  opacity: 0.8;
 }
 
 .main {
-  padding: 2.5rem 0;
+  padding: 0 0 2.5rem 0;
   flex: 1;
   display: flex;
   width: 100%;
@@ -32,7 +33,7 @@
 .header {
   position: relative;
   min-height: 60vh;
-  margin-top: -44px;
+  margin-top: 0;
   margin-bottom: 120px;
   padding: 0 20px 50px;
   width: 100%;
@@ -40,7 +41,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(to bottom,rgba(0,30,60,0.4),rgba(40,0,20,0.4));
+  background: var(--card-bg);
   overflow: hidden;
 }
 
@@ -61,8 +62,8 @@
   transform-origin: 0;
   background-size: cover;
   background-position: 50%;
-  filter: blur(1px) brightness(.5) contrast(.5) hue-rotate(240deg);
-  opacity: .5;
+  filter: var(--header-filter);
+  opacity: var(--header-opacity);
   z-index: 0;
 }
 
@@ -96,7 +97,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -110,7 +111,7 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
-  background-image: linear-gradient(90.69deg,#88ffea 13.42%,#ff4ecd 42.37%,#1a75ff 103.09%);
+  background-image: var(--title-gradient);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -123,10 +124,12 @@
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
+  color: var(--text-color);
 }
 
 .code {
-  background: #fafafa;
+  background: var(--code-bg);
+  color: var(--code-text);
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
@@ -147,16 +150,15 @@
   margin: 1.5rem 1rem;
   padding: 2rem 1.5rem 5rem 1.5rem;
   text-align: left;
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
   cursor: pointer;
-  border: 1px solid #494646;
+  border: 1px solid var(--footer-border);
   border-radius: 10px;
   max-width: 300px;
   height: 90%;
   width: 100%;
-  background: rgba(255,255,255,0.1);
-  /* box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.2); */
+  background: var(--card-bg);
   backdrop-filter: blur(10px);
   transition: all .5s ease;
 }
@@ -164,8 +166,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #bcc8d6;
-  border-color: #4b6a8e;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
   box-shadow: inset 0px -1px 20px 0px;
 }
 
@@ -173,7 +175,7 @@
     margin: 0 0 1rem 0;
     font-size: 28px;
     font-weight: bold;
-    color: #88ffea;
+    color: var(--accent-color);
     line-height: 38px;
 }
 

@@ -1,7 +1,7 @@
 ---
 title: Mastering WebSockets in React for Real-Time Apps
 description: A comprehensive guide on implementing WebSockets in React to build highly interactive, real-time features like chat and live updates.
-date: March 05, 2026
+date: January 09, 2026
 ogImg: ''
 hide: false
 ---

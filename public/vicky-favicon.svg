@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Outer glow ring - using the primary accent color from top-band -->
+  <circle cx="50" cy="50" r="45" fill="none" stroke="#1a75ff" stroke-width="8" />
+  
+  <!-- "vicky" text - using the secondary accent color for contrast -->
+  <text 
+    x="50%" 
+    y="55%" 
+    dominant-baseline="middle" 
+    text-anchor="middle" 
+    font-family="Arial Black, sans-serif" 
+    font-size="34" 
+    fill="#ff4ecd"
+    style="font-weight: 900; filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.3));"
+  >
+    vicky
+  </text>
+</svg>
