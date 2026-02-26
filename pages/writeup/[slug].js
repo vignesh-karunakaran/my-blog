@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Head from 'next/head';
-import marked from 'marked';
+import { marked } from 'marked';
 import markedImages from 'marked-images';
 import Layout from '../../components/layout';
 import styles from '../../styles/Home.module.css';
@@ -82,7 +82,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const markdownWithMetadata = fs.readFileSync(path.join('posts', `${slug}.md`)).toString();
   const parsedMarkdown = matter(markdownWithMetadata);
   marked.use(markedImages);
-  const htmlString = marked(parsedMarkdown.content);
+  const htmlString = marked.parse(parsedMarkdown.content);
   const isLive = process.env.IS_LIVE || false;
   const gToken = process.env.ANALYTICS_TOKEN || null;
   parsedMarkdown.data.domainUrl = process.env.DOMAIN_URL || null;
