@@ -25,6 +25,7 @@ const ResumeComponent = () => {
           <span className="skill-item">HTML</span>
           <span className="skill-item">CSS</span>
           <span className="skill-item">JAVA</span>
+          <span className="skill-item">PYTHON</span>
           <span className="skill-item">TYPESCRIPT</span>
           <span className="skill-item">REACT</span>
           <span className="skill-item">REDUX</span>
