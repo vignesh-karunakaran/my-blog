@@ -1,7 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #252324;
+    --accent-color: #1a75ff;
+    --secondary-accent: #ff4ecd;
+    --code-bg: #f5f5f5;
+    --code-text: #000;
+    --footer-border: #ddd;
+    --card-bg: rgba(0, 0, 0, 0.05);
+    --nav-text: #252324;
+    --header-filter: blur(0px) brightness(1.1) contrast(1);
+    --header-opacity: 0.3;
+    --title-gradient: linear-gradient(90.69deg, #0070f3 13.42%, #ff4ecd 42.37%, #1a75ff 103.09%);
+}
+
+[data-theme='dark'] {
+    --bg-color: #252324;
+    --text-color: #fff;
+    --accent-color: #88ffea;
+    --secondary-accent: #ff4ecd;
+    --code-bg: #000;
+    --code-text: #A8FF61;
+    --footer-border: #3f3c3c;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --nav-text: #252324;
+    --header-filter: blur(1px) brightness(.5) contrast(.5) hue-rotate(240deg);
+    --header-opacity: 0.5;
+    --title-gradient: linear-gradient(90.69deg, #88ffea 13.42%, #ff4ecd 42.37%, #1a75ff 103.09%);
+}
+
 html {
-    font-size: 17px;
-    font-family: "Roboto Mono", serif;
+    font-size: 16px;
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
@@ -9,9 +41,12 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Ubuntu', sans-serif;
-    color: #fff;
-    background-color: #252324;
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -25,9 +60,8 @@ a {
 
 .blog.container {
     min-height: 100vh;
-    padding: 0 0.5rem;
+    padding: 2rem 0.5rem;
     margin: 0 15%;
-    border: #eee solid 1px;
     max-width: 1360px;
     border: none;
     backdrop-filter: blur(40px);
@@ -36,22 +70,38 @@ a {
 .blog h1 {
     display: flex;
     justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .blog pre {
-    background-color: #000;
+    background-color: var(--code-bg);
     padding: 20px;
-    border: black solid 1px;
-    border-radius: 4px;
-    color: #A8FF61;
+    border: 1px solid var(--footer-border);
+    border-radius: 8px;
+    color: var(--code-text);
     max-width: 100%;
-    overflow-y: hidden;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.blog.container ul, 
+.blog.container ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.blog.container li {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
 }
 
 .blog.container>div>p>code {
     padding: 4px;
     border-radius: 5px;
-    background-color: #000;
+    background-color: var(--code-bg);
 }
 
 .top-band {
@@ -62,10 +112,11 @@ a {
     background-image: linear-gradient(90.69deg,#88ffea 13.42%,#ff4ecd 42.37%,#1a75ff 103.09%);
     height: 50px;
     padding: 0 25px;
+    border-bottom: none;
 }
 
 .top-band a {
-    color: #252324;
+    color: var(--nav-text);
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 900;
@@ -85,6 +136,56 @@ a {
     margin-left: 20px;
 }
 
+.theme-toggle-btn {
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--nav-text);
+    margin-left: 20px;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 600px) {
+    .top-band {
+        padding: 0 10px;
+    }
+    .top-band a {
+        font-size: 0.9rem;
+    }
+    .flex-column div {
+        margin-left: 10px;
+    }
+    .theme-toggle-btn {
+        margin-left: 5px;
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .top-band a {
+        font-size: 0.8rem;
+    }
+    .flex-column div {
+        margin-left: 8px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .theme-toggle-btn {
+        display: none;
+    }
+}
+
 
 .not-found h1 {
     text-align: center;
@@ -92,48 +193,120 @@ a {
 
 .blog.container>div>p {
     text-align: left;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
 }
 
 .blog.container>div>h3,
  .blog.container>div>h2, .blog.container>div>h4 {
-    font-size: 32px;
-    line-height: 48px;
-    color: #88ffea;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: var(--accent-color);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .blog.container>div>p>img {
-    max-width: 80vh;
-    width: 80%;
-    height: fit-content;
-    border-radius: 1%;
-    object-fit: scale-down;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .footer {
     width: 100%;
-    height: 60px;
-    border-top: 1px solid #3f3c3c;
+    border-top: 1px solid var(--footer-border);
+    background-color: var(--card-bg);
+    padding: 0.5rem 0;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer > a {
-    margin: 0 5px 0 0;
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    gap: 5px;
+}
+
+.footer-section {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-section:nth-child(2) {
+    align-items: center;
+}
+
+.footer-section:last-child {
+    align-items: flex-end;
 }
 
 .footer p {
-    font-size: 17px;
-    margin-right: 5px;
-    color: #88ffea;
+    font-size: 13px;
+    margin: 2px 0;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.footer .footer-tagline {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-socials a {
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.footer-socials a:hover {
+    transform: translateY(-3px);
+}
+
+.footer-made-with {
+    font-size: 12px !important;
+    font-weight: 500;
+}
+
+/* Ensure github icon is visible in dark mode if it's black */
+[data-theme='dark'] .github-icon {
+    filter: invert(1);
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    .footer-section {
+        align-items: center !important;
+    }
 }
 
 .intro-card {
     width: 50%;
     display: flex;
-    background: rgba(255,255,255,0.1);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     margin: 10vh auto 50px;
     padding: 2rem;
@@ -168,7 +341,7 @@ a {
 .profile-desc h2 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: #88ffea;
+    color: var(--accent-color);
 }
 
 .profile-desc p {
@@ -183,7 +356,7 @@ a {
 .about-text-container h3 {
     margin-top: 20px;
     margin-bottom: 10px;
-    color: #88ffea;
+    color: var(--accent-color);
 }
 
 .main-body {
@@ -195,9 +368,9 @@ a {
 .note-container {
     margin: 50px auto;
     padding: 30px;
-    color: #88ffea;
+    color: var(--accent-color);
     border-radius: 10px;
-    background-color: rgba(255,255,255,0.1);
+    background-color: var(--card-bg);
 }
 .note-desc {
     text-decoration: none;
@@ -211,8 +384,8 @@ a {
     margin-bottom: 15px;
 }
 .note-tags > li {
-    border: 1px solid #ff4ecd;
-    color: #ff4ecd;
+    border: 1px solid var(--secondary-accent);
+    color: var(--secondary-accent);
     border-radius: 4px;
     padding: 2px 10px;
     margin: 5px 4px;
@@ -224,7 +397,7 @@ a {
     font-size: 1.5em;
     font-weight: bold;
     margin-top: 10px;
-    color: #88ffea;
+    color: var(--accent-color);
 }
 
 @media screen and (max-width: 600px) {
@@ -257,13 +430,13 @@ a {
 .resume-container {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: var(--text-color);
   max-width: 900px;
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--footer-border);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: var(--bg-color);
   border-radius: 10px;
 }
 
@@ -271,25 +444,26 @@ a {
   text-align: center;
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid var(--footer-border);
 }
 
 .resume-name {
   font-size: 2.5em;
   margin-bottom: 5px;
-  color: #2c3e50;
+  color: var(--accent-color);
 }
 
 .resume-tagline {
   font-size: 1.2em;
-  color: #7f8c8d;
+  color: var(--text-color);
+  opacity: 0.8;
   margin-bottom: 15px;
 }
 
 .contact-info p {
   margin: 5px 0;
   font-size: 0.9em;
-  color: #555;
+  color: var(--text-color);
 }
 
 .resume-section {
@@ -298,8 +472,8 @@ a {
 
 .resume-section h2 {
   font-size: 1.8em;
-  color: #2c3e50;
-  border-bottom: 2px solid #3498db;
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
@@ -313,8 +487,8 @@ a {
 }
 
 .skill-item {
-  background-color: #ecf0f1;
-  color: #34495e;
+  background-color: var(--card-bg);
+  color: var(--text-color);
   padding: 8px 15px;
   border-radius: 5px;
   font-size: 0.9em;
@@ -325,28 +499,29 @@ a {
 .education-item {
   margin-bottom: 20px;
   padding: 15px;
-  background-color: #f9f9f9;
-  border-left: 5px solid #3498db;
+  background-color: var(--card-bg);
+  border-left: 5px solid var(--accent-color);
 }
 
 .experience-item h3,
 .education-item h3 {
   font-size: 1.3em;
-  color: #34495e;
+  color: var(--accent-color);
   margin-bottom: 5px;
 }
 
 .company-name,
 .institution-name {
   font-weight: bold;
-  color: #555;
+  color: var(--text-color);
   margin-bottom: 5px;
 }
 
 .experience-duration,
 .education-duration {
   font-style: italic;
-  color: #7f8c8d;
+  color: var(--text-color);
+  opacity: 0.7;
   margin-bottom: 10px;
 }
 
@@ -373,7 +548,7 @@ a {
 }
 
 .links-section a {
-  color: #3498db;
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: bold;
 }
@@ -385,7 +560,7 @@ a {
 .languages-section p {
   text-align: center;
   font-size: 1.1em;
-  color: #555;
+  color: var(--text-color);
 }
 @media screen and (min-width: 601px) {
      .flex-column {
