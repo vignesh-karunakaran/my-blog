@@ -64,7 +64,6 @@ a {
     margin: 0 15%;
     max-width: 1360px;
     border: none;
-    backdrop-filter: blur(40px);
 }
 
 .blog h1 {
