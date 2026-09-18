@@ -27,6 +27,7 @@ const ResumeComponent = () => {
           <span className="skill-item">JAVA</span>
           <span className="skill-item">PYTHON</span>
           <span className="skill-item">TYPESCRIPT</span>
+          <span className="skill-item">SPRING BOOT</span>
           <span className="skill-item">REACT</span>
           <span className="skill-item">REDUX</span>
           <span className="skill-item">EMBER</span>
@@ -49,7 +50,9 @@ const ResumeComponent = () => {
           <p className="experience-duration">AUG 2024 - Present ({calculateMonthsSinceJoining("2024-08-04")} Months Exp)</p>
           <ul>
             <li>Worked in banking Product Application (Fiserv).</li>
-            <li>Worked in a React application where I have added some features and fixed some of the bugs in the application and implemented CRA to Vite migration in that web app.</li>
+            <li>Developed and maintained features across a React/TypeScript frontend and Spring Boot backend, delivering new functionality and resolving application defects to improve stability.</li>
+            <li>Designed and implemented new REST API endpoints in Spring Boot and built the corresponding UI features in React/TypeScript, owning end-to-end full-stack delivery.</li>
+            <li>Led the migration of the React application from Create React App (CRA) to Vite, modernizing the build toolchain and improving build and development performance.</li>
           </ul>
         </div>
 
