@@ -217,6 +217,27 @@ a {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+.blog.container>div>table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 16px;
+}
+
+.blog.container>div>table th,
+.blog.container>div>table td {
+    border: 1px solid var(--footer-border);
+    padding: 8px 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.blog.container>div>table th {
+    background-color: var(--card-bg);
+}
+
 .footer {
     width: 100%;
     border-top: 1px solid var(--footer-border);
